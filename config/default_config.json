@@ -1,0 +1,124 @@
+{
+  "forest_generation": {
+    "area_m2": 1000000,
+    "tree_density_per_ha": 500,
+    "min_tree_spacing_m": 3.0,
+    "species_mix": {
+      "pine": 40,
+      "oak": 30,
+      "birch": 20,
+      "maple": 10
+    },
+    "dbh_range_cm": {
+      "min": 15,
+      "max": 60
+    },
+    "height_range_m": {
+      "min": 8,
+      "max": 30
+    },
+    "raster_resolution_m": 0.5,
+    "gpt_model": "gpt-4",
+    "use_gpt": false,
+    "gpt_prompt_template": "Generate a forest map with {area} square meters, tree density of {density} trees per hectare, with species: {species}."
+  },
+  "em_propagation": {
+    "model": "weissberger",
+    "frequency_mhz": 868,
+    "tx_power_dbm": 14,
+    "antenna_gain_tx_dbi": 2.15,
+    "antenna_gain_rx_dbi": 2.15,
+    "noise_floor_dbm": -120,
+    "snr_threshold_db": 6,
+    "ground_reflection": true,
+    "ground_reflection_coefficient": 0.3,
+    "weissberger": {
+      "frequency_mhz": 868,
+      "applicable_range_m": [14, 400]
+    },
+    "cost235": {
+      "frequency_mhz": 868,
+      "vegetation_density_factor": 1.0
+    },
+    "itur_p833": {
+      "max_attenuation_db_per_m": 0.3,
+      "characteristic_distance_m": 20
+    }
+  },
+  "optimization": {
+    "algorithm": "nsga2",
+    "nsga2": {
+      "population_size": 100,
+      "n_generations": 200,
+      "crossover_prob": 0.9,
+      "crossover_eta": 15,
+      "mutation_prob": 0.1,
+      "mutation_eta": 20
+    },
+    "smpso": {
+      "swarm_size": 100,
+      "n_iterations": 200,
+      "inertia_weight": 0.4,
+      "cognitive_coeff": 1.5,
+      "social_coeff": 1.5
+    },
+    "objectives": {
+      "maximize_coverage": true,
+      "minimize_node_count": true,
+      "minimize_energy": true,
+      "minimize_flight_distance": true
+    },
+    "constraints": {
+      "min_sensor_spacing_m": 50,
+      "min_gateway_spacing_m": 0,
+      "max_sensors": 50,
+      "coverage_threshold_percent": 95,
+      "snr_threshold_db": 6
+    },
+    "sensor_range_m": 150,
+    "gateway_positions": [
+      [50, 50],
+      [450, 450]
+    ],
+    "no_drop_zones": []
+  },
+  "uav_planning": {
+    "uav_speed_m_per_s": 15,
+    "max_altitude_m": 120,
+    "min_altitude_m": 30,
+    "battery_capacity_wh": 300,
+    "payload_limit_kg": 5,
+    "sensor_weight_kg": 0.2,
+    "uav_mass_kg": 3.5,
+    "hover_time_per_drop_s": 5,
+    "energy_model": {
+      "horizontal_flight_wh_per_m": 0.05,
+      "vertical_climb_wh_per_m_per_kg": 0.15,
+      "hover_wh_per_s": 8
+    },
+    "depot_position": [0, 0],
+    "tsp_solver": "christofides",
+    "trajectory_smoothing": true
+  },
+  "visualization": {
+    "figure_dpi": 150,
+    "save_dpi": 300,
+    "font_family": "Times New Roman",
+    "font_size": 25,
+    "use_chinese_labels": true,
+    "colormap_forest": "tab10",
+    "colormap_heatmap": "RdYlGn_r",
+    "figure_size_inches": [12, 10]
+  },
+  "export": {
+    "formats": ["png", "pdf", "json", "csv", "geojson"],
+    "output_directory": "data/scenarios"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_to_file": true,
+    "log_file": "fodemir_sim.log"
+  }
+}
+
+

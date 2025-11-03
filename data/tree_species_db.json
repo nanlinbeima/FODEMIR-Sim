@@ -1,0 +1,100 @@
+{
+  "species": {
+    "pine": {
+      "scientific_name": "Pinus sylvestris",
+      "dbh_mean_cm": 30,
+      "dbh_std_cm": 10,
+      "height_allometry": {
+        "a": 1.2,
+        "b": 0.65
+      },
+      "crown_diameter_allometry": {
+        "a": 0.15,
+        "b": 0.8
+      },
+      "color": "#2E7D32",
+      "typical_density_per_ha": 400
+    },
+    "oak": {
+      "scientific_name": "Quercus robur",
+      "dbh_mean_cm": 40,
+      "dbh_std_cm": 15,
+      "height_allometry": {
+        "a": 1.5,
+        "b": 0.6
+      },
+      "crown_diameter_allometry": {
+        "a": 0.2,
+        "b": 0.75
+      },
+      "color": "#558B2F",
+      "typical_density_per_ha": 300
+    },
+    "birch": {
+      "scientific_name": "Betula pendula",
+      "dbh_mean_cm": 25,
+      "dbh_std_cm": 8,
+      "height_allometry": {
+        "a": 1.3,
+        "b": 0.7
+      },
+      "crown_diameter_allometry": {
+        "a": 0.12,
+        "b": 0.85
+      },
+      "color": "#7CB342",
+      "typical_density_per_ha": 500
+    },
+    "maple": {
+      "scientific_name": "Acer platanoides",
+      "dbh_mean_cm": 35,
+      "dbh_std_cm": 12,
+      "height_allometry": {
+        "a": 1.4,
+        "b": 0.62
+      },
+      "crown_diameter_allometry": {
+        "a": 0.18,
+        "b": 0.78
+      },
+      "color": "#9CCC65",
+      "typical_density_per_ha": 350
+    },
+    "spruce": {
+      "scientific_name": "Picea abies",
+      "dbh_mean_cm": 32,
+      "dbh_std_cm": 11,
+      "height_allometry": {
+        "a": 1.25,
+        "b": 0.68
+      },
+      "crown_diameter_allometry": {
+        "a": 0.13,
+        "b": 0.82
+      },
+      "color": "#1B5E20",
+      "typical_density_per_ha": 450
+    },
+    "beech": {
+      "scientific_name": "Fagus sylvatica",
+      "dbh_mean_cm": 38,
+      "dbh_std_cm": 14,
+      "height_allometry": {
+        "a": 1.45,
+        "b": 0.61
+      },
+      "crown_diameter_allometry": {
+        "a": 0.19,
+        "b": 0.76
+      },
+      "color": "#689F38",
+      "typical_density_per_ha": 320
+    }
+  },
+  "allometry_notes": {
+    "height": "Height (m) = a * DBH^b, where DBH is in cm",
+    "crown_diameter": "Crown diameter (m) = a * DBH^b, where DBH is in cm"
+  }
+}
+
+
