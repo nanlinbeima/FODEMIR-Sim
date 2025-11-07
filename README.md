@@ -111,7 +111,7 @@ python main.py
 
 ### Basic Workflow
 
-1. **Configure Parameters** (Tab 1: 参数设置)
+1. **Configure Parameters** 
    - Forest area: 100,000 m²
    - Tree density: 500 trees/ha
    - EM model: Weissberger
@@ -120,46 +120,46 @@ python main.py
    - Population: 100
    - Generations: 200
 
-2. **Run Simulation** (Click "开始仿真")
+2. **Run Simulation** 
    - Step 1: Forest generation (25%)
    - Step 2: EM propagation (50%)
    - Step 3: Optimization (75%)
    - Step 4: UAV planning (90%)
 
-3. **View Results** (Tab 2: 仿真可视化)
+3. **View Results** 
    - **Figure 1**: Forest map with tree species
    - **Figure 2**: Signal coverage heatmap
    - **Figure 3**: Pareto front & deployment
    - **Figure 4**: UAV 3D trajectory
 
-4. **Analyze Solutions** (Tab 3: 优化结果)
+4. **Analyze Solutions** 
    - Browse Pareto-optimal solutions
    - Select solution by criterion
    - View objective trade-offs
 
-5. **Export Data** (Tab 4: 导出 & 报告)
+5. **Export Data** 
    - PNG/PDF figures (300 DPI)
    - CSV data tables
    - GeoJSON spatial data
 
 ## 📊 Example Output
 
-### Figure 1: Forest Distribution Map (森林分布图)
+### Figure 1: Forest Distribution Map 
 - 2D scatter plot with crown circles
 - Species color-coded (pine=green, oak=yellow, etc.)
 - Chinese axis labels: "东-西方向 (m)", "南-北方向 (m)"
 
-### Figure 2: EM Coverage Heatmap (信号覆盖热力图)
+### Figure 2: EM Coverage Heatmap 
 - SNR/RSSI spatial distribution
 - Coverage threshold contour lines
 - Gateway (triangle) and sensor (circle) markers
 
-### Figure 3: Pareto Front & Deployment (Pareto前沿)
+### Figure 3: Pareto Front & Deployment 
 - 3D scatter of objective space
 - Interactive solution selection
 - Sensor deployment overlay on coverage map
 
-### Figure 4: UAV Flight Trajectory (UAV飞行轨迹)
+### Figure 4: UAV Flight Trajectory 
 - 3D trajectory with altitude color gradient
 - Vertical drop lines at sensor positions
 - Inset: Cumulative energy vs. waypoint
@@ -196,7 +196,7 @@ python main.py
 }
 ```
 
-Load custom configuration: `File → 打开配置`
+Load custom configuration: `File → opensetting`
 
 ## 📐 Technical Specifications
 
