@@ -196,7 +196,7 @@ python main.py
 }
 ```
 
-Load custom configuration: `File → opensetting`
+Load custom configuration: `File → Open configuration`
 
 ## 📐 Technical Specifications
 
