@@ -355,4 +355,4 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 *Last updated: October 2025*
 
-
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/nanlinbeima/FODEMIR-Sim/blob/main/LICENSE) file for details.
